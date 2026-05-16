@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NORA STORE ID — Digital Marketing & Social Media Growth Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        }
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 4px solid #3b82f6;
+        }
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: #3b82f6;
+        }
+        header p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .section-title.indo {
+            color: #ef4444;
+            border-bottom: 2px dashed #ef4444;
+            padding-bottom: 10px;
+            display: inline-block;
+            width: 100%;
+        }
+        .grid-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #1e293b;
+            color: white;
+            padding: 15px 20px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-bottom: 3px solid #3b82f6;
+        }
+        .card-header.indo-service {
+            background-color: #7f1d1d;
+            border-bottom: 3px solid #ef4444;
+        }
+        .price-list {
+            list-style: none;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .price-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #e2e8f0;
+            font-size: 0.95rem;
+        }
+        .price-list li strong {
+            color: #2563eb;
+        }
+        .card-header.indo-service + .price-list li strong {
+            color: #dc2626;
+        }
+        .details {
+            background-color: #f1f5f9;
+            padding: 12px 20px;
+            font-size: 0.85rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+        }
+        .details p {
+            margin-bottom: 4px;
+        }
+        .btn-order {
+            display: block;
+            text-align: center;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            font-weight: 700;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-order:hover {
+            background-color: #128C7E;
+        }
+        .info-box {
+            background: white;
+            border-left: 5px solid #3b82f6;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+        .info-box.green {
+            border-left-color: #25d366;
+        }
+        .info-box h3 {
+            margin-bottom: 12px;
+            color: #0f172a;
+        }
+        .info-box ul {
+            padding-left: 20px;
+        }
+        .info-box li {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+        .warning-box {
+            background: #fef2f2;
+            border-left: 5px solid #ef4444;
+            padding: 25px;
+            border-radius: 8px;
+            color: #991b1b;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .footer-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .btn-footer {
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+        .btn-footer:hover {
+            opacity: 0.9;
+        }
+        .btn-channel { background-color: #0284c7; }
+        .btn-tg { background-color: #0088cc; }
+        .btn-email { background-color: #ea4335; }
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            font-size: 0.85rem;
+        }
+        footer p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>NORA STORE ID</h1>
+        <p>Digital Marketing & Social Media Growth Services. Menyediakan layanan peningkatan engagement & audience untuk berbagai platform sosial media dengan sistem terstruktur, proses stabil, dan kualitas terjaga.</p>
+    </header>
+
+    <div class="container">
+        
+        <h2 class="section-title">Layanan Global / Reguler</h2>
+        
+        <div class="grid-services">
+            
+            <div class="card">
+                <div class="card-header">TikTok Views</div>
+                <ul class="price-list">
+                    <li><span>1.000 Views</span> <strong>Rp3.000</strong></li>
+                    <li><span>2.000 Views</span> <strong>Rp4.000</strong></li>
+                    <li><span>3.000 Views</span> <strong>Rp6.000</strong></li>
+                    <li><span>4.000 Views</span> <strong>Rp7.500</strong></li>
+                    <li><span>5.000 Views</span> <strong>Rp8.000</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 1000 | Max: 50000</p>
+                    <p>• Estimasi: 0–12 Jam</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20TikTok%20Views" class="btn-order" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">TikTok Likes</div>
+                <ul class="price-list">
+                    <li><span>1.000 Likes</span> <strong>Rp3.500</strong></li>
+                    <li><span>2.000 Likes</span> <strong>Rp4.500</strong></li>
+                    <li><span>3.000 Likes</span> <strong>Rp5.500</strong></li>
+                    <li><span>4.000 Likes</span> <strong>Rp6.500</strong></li>
+                    <li><span>5.000 Likes</span> <strong>Rp7.500</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 1000 | Max: 50000</p>
+                    <p>• Estimasi: 0–12 Jam</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20TikTok%20Likes" class="btn-order" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">TikTok Followers</div>
+                <ul class="price-list">
+                    <li><span>50 Followers</span> <strong>Rp2.000</strong></li>
+                    <li><span>100 Followers</span> <strong>Rp3.000</strong></li>
+                    <li><span>200 Followers</span> <strong>Rp4.900</strong></li>
+                    <li><span>300 Followers</span> <strong>Rp6.999</strong></li>
+                    <li><span>400 Followers</span> <strong>Rp9.999</strong></li>
+                    <li><span>500 Followers</span> <strong>Rp11.999</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 50 | Max: 5000</p>
+                    <p>• Estimasi: 1–48 Jam (bertahap)</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20TikTok%20Followers" class="btn-order" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">Roblox Followers</div>
+                <ul class="price-list">
+                    <li><span>50 Followers</span> <strong>Rp4.500</strong></li>
+                    <li><span>100 Followers</span> <strong>Rp6.900</strong></li>
+                    <li><span>200 Followers</span> <strong>Rp13.500</strong></li>
+                    <li><span>300 Followers</span> <strong>Rp20.500</strong></li>
+                    <li><span>400 Followers</span> <strong>Rp26.500</strong></li>
+                    <li><span>500 Followers</span> <strong>Rp32.900</strong></li>
+                    <li><span>1.000 Followers</span> <strong>Rp65.500</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 50 | Max: 2000</p>
+                    <p>• Estimasi: 1–24 Jam (bertahap)</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20Roblox%20Followers" class="btn-order" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">Roblox Friends</div>
+                <ul class="price-list">
+                    <li><span>50 Friends</span> <strong>Rp1.500</strong></li>
+                    <li><span>100 Friends</span> <strong>Rp3.000</strong></li>
+                    <li><span>200 Friends</span> <strong>Rp6.000</strong></li>
+                    <li><span>300 Friends</span> <strong>Rp8.500</strong></li>
+                    <li><span>400 Friends</span> <strong>Rp11.000</strong></li>
+                    <li><span>500 Friends</span> <strong>Rp14.000</strong></li>
+                    <li><span>1.000 Friends</span> <strong>Rp27.500</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 50 | Max: 2000</p>
+                    <p>• Estimasi: 1–24 Jam (bertahap)</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20Roblox%20Friends" class="btn-order" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">Instagram Views</div>
+                <ul class="price-list">
+                    <li><span>1.000 Views</span> <strong>Rp1.800</strong></li>
+                    <li><span>2.000 Views</span> <strong>Rp1.900</strong></li>
+                    <li><span>3.000 Views</span> <strong>Rp2.000</strong></li>
+                    <li><span>4.000 Views</span> <strong>Rp2.900</strong></li>
+                    <li><span>5.000 Views</span> <strong>Rp3.000</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 1000 | Max: 100000</p>
+                    <p>• Estimasi: 0–12 Jam</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20Instagram%20Views" class="btn-order" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">Instagram Likes</div>
+                <ul class="price-list">
+                    <li><span>1.000 Likes</span> <strong>Rp1.800</strong></li>
+                    <li><span>2.000 Likes</span> <strong>Rp2.800</strong></li>
+                    <li><span>3.000 Likes</span> <strong>Rp3.800</strong></li>
+                    <li><span>4.000 Likes</span> <strong>Rp4.800</strong></li>
+                    <li><span>5.000 Likes</span> <strong>Rp5.800</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 1000 | Max: 100000</p>
+                    <p>• Estimasi: 0–12 Jam</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20Instagram%20Likes" class="btn-order" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">Instagram Followers</div>
+                <ul class="price-list">
+                    <li><span>100 Followers</span> <strong>Rp3.999</strong></li>
+                    <li><span>500 Followers</span> <strong>Rp4.999</strong></li>
+                    <li><span>1.000 Followers</span> <strong>Rp7.500</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 50 | Max: 5000</p>
+                    <p>• Estimasi: 1–48 Jam (bertahap)</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20Instagram%20Followers" class="btn-order" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">WhatsApp Channel Members</div>
+                <ul class="price-list">
+                    <li><span>100 Members</span> <strong>Rp4.900</strong></li>
+                    <li><span>200 Members</span> <strong>Rp7.900</strong></li>
+                    <li><span>300 Members</span> <strong>Rp11.900</strong></li>
+                    <li><span>400 Members</span> <strong>Rp14.900</strong></li>
+                    <li><span>500 Members</span> <strong>Rp18.900</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 50 | Max: 5000</p>
+                    <p>• Estimasi: 1–24 Jam</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20WhatsApp%20Channel%20Members" class="btn-order" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">WhatsApp Vote</div>
+                <ul class="price-list">
+                    <li><span>100 Vote</span> <strong>Rp11.500</strong></li>
+                    <li><span>200 Vote</span> <strong>Rp21.500</strong></li>
+                    <li><span>300 Vote</span> <strong>Rp31.500</strong></li>
+                    <li><span>400 Vote</span> <strong>Rp41.500</strong></li>
+                    <li><span>500 Vote</span> <strong>Rp51.500</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 50 | Max: 5000</p>
+                    <p>• Estimasi: 1–24 Jam</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20WhatsApp%20Vote" class="btn-order" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">WhatsApp Reaction</div>
+                <ul class="price-list">
+                    <li><span>100 Reaction</span> <strong>Rp3.500</strong></li>
+                    <li><span>200 Reaction</span> <strong>Rp6.500</strong></li>
+                    <li><span>300 Reaction</span> <strong>Rp8.500</strong></li>
+                    <li><span>400 Reaction</span> <strong>Rp10.500</strong></li>
+                    <li><span>500 Reaction</span> <strong>Rp12.500</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 50 | Max: 5000</p>
+                    <p>• Estimasi: 1–24 Jam</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20WhatsApp%20Reaction" class="btn-order" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">YouTube Subscribers</div>
+                <ul class="price-list">
+                    <li><span>100 Subs</span> <strong>Rp28.800</strong></li>
+                    <li><span>200 Subs</span> <strong>Rp55.900</strong></li>
+                    <li><span>300 Subs</span> <strong>Rp83.900</strong></li>
+                    <li><span>400 Subs</span> <strong>Rp111.900</strong></li>
+                    <li><span>500 Subs</span> <strong>Rp138.900</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 50 | Max: 2000</p>
+                    <p>• Estimasi: 1–72 Jam (bertahap)</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20YouTube%20Subscribers" class="btn-order" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">Facebook Followers</div>
+                <ul class="price-list">
+                    <li><span>100 Followers</span> <strong>Rp800</strong></li>
+                    <li><span>200 Followers</span> <strong>Rp900</strong></li>
+                    <li><span>300 Followers</span> <strong>Rp1.700</strong></li>
+                    <li><span>400 Followers</span> <strong>Rp1.800</strong></li>
+                    <li><span>500 Followers</span> <strong>Rp2.000</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 50 | Max: 5000</p>
+                    <p>• Estimasi: 1–24 Jam</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20Facebook%20Followers" class="btn-order" target="_blank">Order Via WhatsApp</a>
+            </div>
+        </div>
+        
+                <div class="section-title indo">🇮🇩 Layanan Target Indonesia (Indo Server) 🇮🇩</div>
+        
+        <div class="grid-services">
+            
+            <div class="card">
+                <div class="card-header indo-service">TikTok Views (Indo)</div>
+                <ul class="price-list">
+                    <li><span>1.000 Views</span> <strong>Rp3.000</strong></li>
+                    <li><span>2.000 Views</span> <strong>Rp4.000</strong></li>
+                    <li><span>3.000 Views</span> <strong>Rp6.000</strong></li>
+                    <li><span>4.000 Views</span> <strong>Rp7.500</strong></li>
+                    <li><span>5.000 Views</span> <strong>Rp8.000</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 1000 | Max: 50000</p>
+                    <p>• Estimasi: 0–12 Jam</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20TikTok%20Views%20Indo" class="btn-order" style="background-color:#dc2626;" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header indo-service">TikTok Likes (Indo)</div>
+                <ul class="price-list">
+                    <li><span>100 Likes</span> <strong>Rp5.500</strong></li>
+                    <li><span>200 Likes</span> <strong>Rp8.500</strong></li>
+                    <li><span>300 Likes</span> <strong>Rp10.500</strong></li>
+                    <li><span>400 Likes</span> <strong>Rp15.500</strong></li>
+                    <li><span>500 Likes</span> <strong>Rp18.500</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 100 | Max: 50000</p>
+                    <p>• Estimasi: 0–12 Jam</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20TikTok%20Likes%20Indo" class="btn-order" style="background-color:#dc2626;" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header indo-service">TikTok Followers (Indo)</div>
+                <ul class="price-list">
+                    <li><span>50 Followers</span> <strong>Rp5.500</strong></li>
+                    <li><span>100 Followers</span> <strong>Rp10.500</strong></li>
+                    <li><span>200 Followers</span> <strong>Rp18.900</strong></li>
+                    <li><span>300 Followers</span> <strong>Rp27.500</strong></li>
+                    <li><span>400 Followers</span> <strong>Rp36.700</strong></li>
+                    <li><span>500 Followers</span> <strong>Rp45.400</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 50 | Max: 5000</p>
+                    <p>• Estimasi: 1–48 Jam (bertahap)</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20TikTok%20Followers%20Indo" class="btn-order" style="background-color:#dc2626;" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header indo-service">Instagram Views (Indo)</div>
+                <ul class="price-list">
+                    <li><span>1.000 Views</span> <strong>Rp1.800</strong></li>
+                    <li><span>2.000 Views</span> <strong>Rp1.900</strong></li>
+                    <li><span>3.000 Views</span> <strong>Rp2.000</strong></li>
+                    <li><span>4.000 Views</span> <strong>Rp2.900</strong></li>
+                    <li><span>5.000 Views</span> <strong>Rp3.000</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 1000 | Max: 100000</p>
+                    <p>• Estimasi: 0–12 Jam</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20Instagram%20Views%20Indo" class="btn-order" style="background-color:#dc2626;" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header indo-service">Instagram Likes (Indo)</div>
+                <ul class="price-list">
+                    <li><span>100 Likes</span> <strong>Rp2.800</strong></li>
+                    <li><span>200 Likes</span> <strong>Rp3.900</strong></li>
+                    <li><span>300 Likes</span> <strong>Rp4.950</strong></li>
+                    <li><span>400 Likes</span> <strong>Rp5.900</strong></li>
+                    <li><span>500 Likes</span> <strong>Rp6.999</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 100 | Max: 100000</p>
+                    <p>• Estimasi: 0–12 Jam</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20Instagram%20Likes%20Indo" class="btn-order" style="background-color:#dc2626;" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header indo-service">Instagram Followers (Indo)</div>
+                <ul class="price-list">
+                    <li><span>100 Followers</span> <strong>Rp4.000</strong></li>
+                    <li><span>200 Followers</span> <strong>Rp6.500</strong></li>
+                    <li><span>300 Followers</span> <strong>Rp9.000</strong></li>
+                    <li><span>400 Followers</span> <strong>Rp10.999</strong></li>
+                    <li><span>500 Followers</span> <strong>Rp13.900</strong></li>
+                    <li><span>1.000 Followers</span> <strong>Rp36.000</strong></li>
+                </ul>
+                <div class="details">
+                    <p>• Min: 50 | Max: 5000</p>
+                    <p>• Estimasi: 1–48 Jam (bertahap)</p>
+                </div>
+                <a href="https://wa.me/6285823824313?text=Halo%20NORA%20STORE%20ID,%20saya%20mau%20order%20Instagram%20Followers%20Indo" class="btn-order" style="background-color:#dc2626;" target="_blank">Order Via WhatsApp</a>
+            </div>
+
+        </div>
+
+        <div class="info-box">
+            <h3>Informasi & Ketentuan Layanan</h3>
+            <ul>
+                <li>Proses dilakukan secara bertahap sesuai sistem & antrian.</li>
+                <li>Estimasi dapat berubah tergantung kondisi server.</li>
+                <li>Tidak disarankan melakukan order berulang dalam waktu dekat pada target akun yang sama.</li>
+                <li>Penurunan (drop) dapat terjadi tergantung kualitas akun target.</li>
+                <li>Order = setuju dengan sistem layanan yang berlaku.</li>
+            </ul>
+        </div>
+
+        <div class="info-box green">
+            <h3>Kenapa Pilih NORA STORE ID?</h3>
+            <ul>
+                <li>Harga kompetitif & stabil.</li>
+                <li>Proses cepat & terstruktur.</li>
+                <li>Pelayanan fast response.</li>
+                <li>Support order skala kecil hingga besar.</li>
+                <li>Repeat order berpotensi mendapatkan harga khusus.</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            NOTE: JIKA TURUN KAMI TIDAK BERTANGGUNG JAWAB JIKA LEWAT DARI GARANSI YANG DITENTUKAN.<br>
+            Minat?? Langsung PM, bergaransi 100% amanah. Kami lebih mengutamakan kepuasan dan kepercayaan pelanggan dibanding keuntungan sesaat.
+        </div>
+
+        <h3 style="text-align:center; margin-bottom: 15px; color:#0f172a;">Hubungi CS & Testimonial</h3>
+        <div class="footer-buttons">
+            <a href="https://whatsapp.com/channel/0029VbCPy2oATRSqSBUpR723" class="btn-footer btn-channel" target="_blank">WhatsApp Channel Testi</a>
+            <a href="https://t.me/bynorastore" class="btn-footer btn-tg" target="_blank">Telegram Admin</a>
+            <a href="mailto:nora.store.id@gmail.com" class="btn-footer btn-email">Email Bisnis</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 NORA STORE ID. All Rights Reserved.</p>
+        <p style="opacity: 0.7; font-size: 0.8rem;">Note: Harga dapat berubah sewaktu-waktu, harap konfirmasi sebelum melakukan order.</p>
+    </footer>
+
+</body>
+</html>
