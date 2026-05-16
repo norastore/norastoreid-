@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine untuk Novitasari!</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffe6f2;
+            color: #d81b60;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(220, 20, 60, 0.4);
+            max-width: 80%;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            color: #e91e63;
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .button-container button {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+        }
+
+        .button-container button:hover {
+            background-color: #d81b60;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(233, 30, 99, 0.5);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border: 5px solid #ff99bb;
+        }
+
+        .slider-container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 20px;
+            border-radius: 10px;
+            background: #f1f1f1;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #ff4081;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+        }
+
+        .slider::-moz-range-thumb {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #ff4081;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+        }
+
+        #sliderValue {
+            margin-top: 15px;
+            font-size: 1.8em;
+            color: #e91e63;
+            font-weight: bold;
+        }
+
+        .flower {
+            position: absolute;
+            background-color: #ffccdd;
+            border-radius: 50%;
+            animation: fall linear infinite;
+            pointer-events: none;
+            opacity: 0.8;
+            box-shadow: 0 0 8px rgba(255, 100, 150, 0.4);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.8; }
+            100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <h1 id="mainTitle">Hai Novitasari yang Paling Cantik! ❤️</h1>
+        <p id="mainMessage">Di hari Valentine ini, aku mau ngajak kamu main sebentar. Jangan kesel ya kalau agak ngeselin, namanya juga usaha! 😉</p>
+        <div class="button-container">
+            <button id="startButton">Mulai Petualangan Valentine!</button>
+        </div>
+
+        <div id="q1" class="hidden">
+            <p>Oke, pertanyaan pertama: Menurut kamu, kado Valentine apa sih yang paling pas buat kamu dari landy? Jujur aja ya! 🎁</p>
+            <div class="button-container">
+                <button id="q1a1">Cincin berlian!</button>
+                <button id="q1a2">Tiket liburan ke Maldives!</button>
+                <button id="q1a3">Pelukan hangat dari kamu aja udah cukup kok. 😊</button>
+            </div>
+        </div>
+
+        <div id="q2" class="hidden">
+            <p>Hehehe, pinter banget jawabnya nyenyenye! Sekarang, kalau kita ngedate di hari Valentine ini, kamu mau pergi ke mana? Pilih yang paling romantis ya! 🥂</p>
+            <div class="button-container">
+                <button id="q2a1">Dinner romantis di rooftop hotel bintang lima.</button>
+                <button id="q2a2">Danau toba.</button>
+                <button id="q2a3">Di rumah aja, sambil masak bareng dan nonton film!</button>
+            </div>
+        </div>
+
+        <div id="q3" class="hidden">
+            <p>Waduh, pilihan kamu bikin aku makin sayang deh! Tapi tunggu dulu, ada satu tes lagi nih. Seberapa besar sih cintamu pada cuamimu ini?</p>
+            <div class="slider-container">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <p id="sliderValue">50%</p>
+            </div>
+            <p>Geser sampai 1000% ya! Kalau nggak, berarti belum cinta banget. Wlee! 😛</p>
+            <button id="finishButton" class="hidden">Lihat Kejutan!</button>
+        </div>
+
+        <div id="finalMessage" class="hidden">
+            <p>Hore! Kamu berhasil melewati semua tantangan (dan keisengan) maspacal! ❤️</p>
+            <p>landy mau bilang, landy cinta banget sama dede, Novitasari! dede adalah hadiah Valentine terbaik yang pernah ada. Setiap hari bersama dede adalah Valentine bagi landy.</p>
+            <div class="image-container">
+                <img src="https://ibb.co/ynnVnxrx" alt="Novitasari">
+            </div>
+            <p>Selamat Hari Valentine, Sayang! Semoga cinta kita mekar seindah bunga-bunga ini.</p>
+        </div>
+    </div>
+
+    <script>
+        const startButton = document.getElementById('startButton');
+        const q1 = document.getElementById('q1');
+        const q2 = document.getElementById('q2');
+        const q3 = document.getElementById('q3');
+        const mainMessage = document.getElementById('mainMessage');
+        const mainTitle = document.getElementById('mainTitle');
+        const mainContainer = document.getElementById('mainContainer');
+        const finalMessage = document.getElementById('finalMessage');
+
+        let clickCount = 0;
+        const messages = [
+            "Seriusan mau mulai? Nanti ketagihan loh sama keisengan cuami dede! 😉",
+            "Oke deh, kalau maksa. Tapi jangan nyesel ya! 😂",
+            "Beneran lho, ini udah siap mental kan? Jangan kabur ya baby🤤! 😎",
+            "Baiklah, karena kamu maksa... ini dia pertanyaan pertama!"
+        ];
+
+        startButton.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount <= messages.length) {
+                mainMessage.textContent = messages[clickCount - 1];
+            }
+            if (clickCount === messages.length) {
+                startButton.textContent = "Lanjut!";
+                setTimeout(() => {
+                    mainMessage.classList.add('hidden');
+                    startButton.classList.add('hidden');
+                    q1.classList.remove('hidden');
+                    mainTitle.textContent = "Pertanyaan Gemes Pertama!";
+                }, 1000);
+            }
+        });
+
+        document.getElementById('q1a1').addEventListener('click', () => showNextQuestion(q2, "Wah, maunya yang mahal nih! Ntar aku nabung dulu ya. 😜"));
+        document.getElementById('q1a2').addEventListener('click', () => showNextQuestion(q2, "Liburan ke Maldives? Siap, nunggu aku jadi sultan dulu! 😂"));
+        document.getElementById('q1a3').addEventListener('click', () => showNextQuestion(q2, "Aww, romantisnya! Tapi tetap aja aku mau kasih yang spesial kok. 🥰"));
+
+        document.getElementById('q2a1').addEventListener('click', () => showNextQuestion(q3, "Dinner romantis? Boleh juga tuh, asalkan sama kamu. 😘"));
+        document.getElementById('q2a2').addEventListener('click', () => showNextQuestion(q3, "Nonton konser bareng? Seru banget! Apalagi kalau bandnya favorit kita berdua. 🎶"));
+        document.getElementById('q2a3').addEventListener('click', () => showNextQuestion(q3, "Di rumah aja? Itu baru namanya quality time! Aku suka banget! ❤️"));
+
+        function showNextQuestion(nextQ, message) {
+            document.querySelector('.container div:not(.hidden)').classList.add('hidden');
+            mainTitle.textContent = message;
+            setTimeout(() => {
+                nextQ.classList.remove('hidden');
+                if (nextQ === q2) mainTitle.textContent = "Pertanyaan Gemes Kedua!";
+                if (nextQ === q3) mainTitle.textContent = "Tes Cinta Terakhir! (Jangan Baper!)";
+            }, 1000);
+        }
+
+        const slider = document.getElementById("myRange");
+        const sliderValueDisplay = document.getElementById("sliderValue");
+        const finishButton = document.getElementById("finishButton");
+
+        slider.oninput = function() {
+            sliderValueDisplay.textContent = this.value + "%";
+            if (parseInt(this.value) >= 100) {
+                sliderValueDisplay.textContent = "1000% (Melebihi Batas Normal! Wow!)"; // "Ngeselin" part
+                finishButton.classList.remove('hidden');
+                mainTitle.textContent = "Yesss! Kamu memang paling luar biasa! 🥰";
+            } else if (parseInt(this.value) > 90) {
+                 sliderValueDisplay.textContent = this.value + "% (Hampir Sempurna!)";
+            }
+        }
+
+        finishButton.addEventListener('click', () => {
+            q3.classList.add('hidden');
+            finalMessage.classList.remove('hidden');
+            mainTitle.textContent = "Untuk Novitasari Cintaku! ❤️";
+            createFlowers();
+        });
+
+        // Flower animation
+        function createFlower() {
+            const flower = document.createElement('div');
+            flower.classList.add('flower');
+            document.body.appendChild(flower);
+
+            const size = Math.random() * 20 + 10; // 10-30px
+            flower.style.width = size + 'px';
+            flower.style.height = size + 'px';
+            flower.style.left = Math.random() * 100 + 'vw';
+            flower.style.animationDuration = Math.random() * 5 + 5 + 's'; // 5-10s
+            flower.style.animationDelay = Math.random() * 0.5 + 's';
+
+            setTimeout(() => {
+                flower.remove();
+            }, parseFloat(flower.style.animationDuration) * 1000);
+        }
+
+        function createFlowers() {
+            setInterval(createFlower, 300); // Create a flower every 300ms
+        }
+    </script>
+</body>
+</html>
